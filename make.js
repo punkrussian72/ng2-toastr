@@ -17,7 +17,7 @@ const Builder = require('systemjs-builder');
 const pkg = require('./package.json');
 const name = pkg.name;
 const targetFolder = path.resolve('./bundles');
-console.log(targetFolder)
+console.log(targetFolder);
 async.waterfall([
   cleanBundlesFolder,
   getSystemJsBundleConfig,
@@ -40,11 +40,11 @@ function getSystemJsBundleConfig(cb) {
     },
     map: {
       typescript: path.resolve('node_modules/typescript/lib/typescript.js'),
-      '@angular': path.resolve('node_modules/@angular'),
-      rxjs: path.resolve('node_modules/rxjs')
+      '@angular': path.resolve('node_modules/@angular/*'),
+      rxjs: path.resolve('node_modules/rxjs/*')
     },
     paths: {
-      '*': '*.js'
+      '*': '*.js',
     }
   };
 
@@ -53,7 +53,7 @@ function getSystemJsBundleConfig(cb) {
     return memo;
   }, {});
   config.meta.moment = {build: false};
-  console.log(config.meta)
+  console.log(config.meta);
   return cb(null, config);
 }
 

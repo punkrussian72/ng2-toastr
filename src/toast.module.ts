@@ -1,8 +1,8 @@
-import {NgModule, ModuleWithProviders} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ToastContainer} from './toast-container.component';
-import {ToastsManager} from './toast-manager';
-import {ToastOptions} from './toast-options';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ToastContainer } from './toast-container.component';
+import { ToastsManager } from './toast-manager';
+import { ToastOptions } from './toast-options';
 
 @NgModule({
   imports: [CommonModule],
@@ -14,7 +14,7 @@ export class ToastModule {
   public static forRoot(): ModuleWithProviders {
     return {
       ngModule: ToastModule,
-      providers: [ToastsManager, ToastOptions],
+      providers: [ToastsManager, ToastOptions]
     };
   }
 }

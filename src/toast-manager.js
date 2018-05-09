@@ -4,15 +4,15 @@ var core_1 = require("@angular/core");
 var toast_container_component_1 = require("./toast-container.component");
 var toast_options_1 = require("./toast-options");
 var toast_1 = require("./toast");
-var Subject_1 = require("rxjs/Subject");
-var ToastsManager = (function () {
+var rxjs_1 = require("rxjs");
+var ToastsManager = /** @class */ (function () {
     function ToastsManager(componentFactoryResolver, ngZone, appRef, options) {
         this.componentFactoryResolver = componentFactoryResolver;
         this.ngZone = ngZone;
         this.appRef = appRef;
         this.options = options;
         this.index = 0;
-        this.toastClicked = new Subject_1.Subject();
+        this.toastClicked = new rxjs_1.Subject();
     }
     ToastsManager.prototype.setRootViewContainerRef = function (vRef) {
         this._rootViewContainerRef = vRef;
@@ -27,7 +27,7 @@ var ToastsManager = (function () {
                 // get app root view component ref
                 if (!_this._rootViewContainerRef) {
                     try {
-                        _this._rootViewContainerRef = _this.appRef['_rootComponents'][0]['_hostElement'].vcRef;
+                        _this._rootViewContainerRef = _this.appRef.components[0].instance;
                     }
                     catch (e) {
                         reject(new Error('Please set root ViewContainerRef using setRootViewContainerRef(vRef: ViewContainerRef) method.'));
@@ -125,22 +125,25 @@ var ToastsManager = (function () {
         return this.show(toast, options);
     };
     // allow user define custom background color and image
-    ToastsManager.prototype.custom = function (message, title, options) {
+    // allow user define custom background color and image
+    ToastsManager.prototype.custom = 
+    // allow user define custom background color and image
+    function (message, title, options) {
         var data = options && options.data ? options.data : null;
         var toast = new toast_1.Toast('custom', message, title, data);
         return this.show(toast, options);
     };
+    ToastsManager.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    ToastsManager.ctorParameters = function () { return [
+        { type: core_1.ComponentFactoryResolver, },
+        { type: core_1.NgZone, },
+        { type: core_1.ApplicationRef, },
+        { type: toast_options_1.ToastOptions, },
+    ]; };
     return ToastsManager;
 }());
-ToastsManager.decorators = [
-    { type: core_1.Injectable },
-];
-/** @nocollapse */
-ToastsManager.ctorParameters = function () { return [
-    { type: core_1.ComponentFactoryResolver, },
-    { type: core_1.NgZone, },
-    { type: core_1.ApplicationRef, },
-    { type: toast_options_1.ToastOptions, },
-]; };
 exports.ToastsManager = ToastsManager;
 //# sourceMappingURL=toast-manager.js.map

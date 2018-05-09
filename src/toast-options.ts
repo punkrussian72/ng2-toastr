@@ -10,7 +10,7 @@ export class ToastOptions {
   // override-able properties
   toastLife: number = 5000;
   enableHTML: boolean = false;
-  dismiss: string = 'auto'; //'auto' | 'click' | 'controlled'
+  dismiss: string = 'auto'; // 'auto' | 'click' | 'controlled'
   messageClass: string = 'toast-message';
   titleClass: string = 'toast-title';
   showCloseButton: boolean = false;
