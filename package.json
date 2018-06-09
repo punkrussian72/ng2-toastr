@@ -1,6 +1,6 @@
 {
   "name": "ng2-toastr-punkrussian",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bootstrap style of toast for modern angular",
   "main": "ng2-toastr-punkrussian.js",
   "typings": "ng2-toastr-punkrussian.d.ts",
