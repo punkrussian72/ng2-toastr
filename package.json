@@ -1,5 +1,5 @@
 {
-  "name": "ng2-toastr",
+  "name": "ng2-toastr-angular6",
   "version": "4.1.2",
   "description": "bootstrap style of toast for modern angular",
   "main": "ng2-toastr.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PointInside/ng2-toastr.git"
+    "url": "git+https://github.com/punkrussian72/ng2-toastr-angular6.git"
   },
   "keywords": [
     "toast",
@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/PointInside/ng2-toastr/issues"
   },
-  "homepage": "https://github.com/PointInside/ng2-toastr#readme",
+  "homepage": "https://github.com/punkrussian72/ng2-toastr-angular6#readme",
   "devDependencies": {
     "@angular/animations": "6.0.0",
     "@angular/common": "6.0.0",
