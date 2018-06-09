@@ -10,4 +10,4 @@ var toast_options_1 = require("./src/toast-options");
 exports.ToastOptions = toast_options_1.ToastOptions;
 var toast_module_1 = require("./src/toast.module");
 exports.ToastModule = toast_module_1.ToastModule;
-//# sourceMappingURL=ng2-toastr-angular6.js.map
+//# sourceMappingURL=ng2-toastr-punkrussian.js.map
