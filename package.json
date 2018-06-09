@@ -1,9 +1,9 @@
 {
-  "name": "ng2-toastr-angular6",
-  "version": "4.1.2",
+  "name": "ng2-toastr-punkrussian",
+  "version": "4.1.3",
   "description": "bootstrap style of toast for modern angular",
-  "main": "ng2-toastr-angular6.js",
-  "typings": "ng2-toastr-angular6.d.ts",
+  "main": "ng2-toastr-punkrussian.js",
+  "typings": "ng2-toastr-punkrussian.d.ts",
   "scripts": {
     "typings": "typings install",
     "webpack": "webpack --progress --profile --bail",
